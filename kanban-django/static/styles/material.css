@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+header.app-bar-container {
+  height: 64px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: 0 1rem;
+}
+
+header.app-bar-container .nav-button {
+  padding-right: 1.5rem;
+  margin: auto 0;
+}
+
+header.app-bar-container h1 {
+  margin: auto 0;
+  color: white;
+}
+
+header.app-bar-container nav {
+  margin: auto 0;
+  padding-left: -1.5rem;
+}
+header.app-bar-container nav ul {
+  display: flex;
+  gap: 1.5rem;
+}
+header.app-bar-container nav ul li {
+  color: white;
+  list-style: none;
+}
