@@ -9,27 +9,27 @@ const lists = ref([
 </script>
 
 <template>
-  <main>
-    <div class="board-title">
+  <div class="board">
+    <div class="board__title">
       <h3>Board Title</h3>
     </div>
-    <div class="kanban-board">
+    <div class="board__content">
       <List v-for="list in lists" :title="list.title" />
     </div>
-  </main>
+  </div>
 </template>
 
 <style scoped>
-main {
+.board {
   margin: 0;
   padding: 2rem;
   background-color: teal;
-  width: 100vw;
-  height: 100vh;
+  height: 100%;
 }
 
-.kanban-board {
+.board__content {
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 </style>
