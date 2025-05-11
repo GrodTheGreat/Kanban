@@ -1,7 +1,11 @@
-<script setup>
+<script setup lang="ts">
 import { ref } from "vue";
 
-const lists = ref([{}, {}, {}]);
+const lists = ref([
+  { title: "Upcoming" },
+  { title: "In Progress" },
+  { title: "Done" },
+]);
 </script>
 
 <template>
@@ -10,7 +14,7 @@ const lists = ref([{}, {}, {}]);
       <h3>Board Title</h3>
     </div>
     <div class="kanban-board">
-      <List v-for="list in lists" />
+      <List v-for="list in lists" :title="list.title" />
     </div>
   </main>
 </template>
