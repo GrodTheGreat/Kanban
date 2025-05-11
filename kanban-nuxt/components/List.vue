@@ -1,5 +1,7 @@
-<script setup>
+<script setup lang="ts">
 import { ref } from "vue";
+
+defineProps<{ title: string }>();
 
 const cards = ref([{}, {}, {}]);
 </script>
@@ -7,17 +9,23 @@ const cards = ref([{}, {}, {}]);
 <template>
   <section class="list">
     <div class="list__header">
-      <h2>List Header</h2>
-      <span>Actions</span>
+      <h2>{{ title }}</h2>
+      <span>
+        <button>...</button>
+      </span>
     </div>
     <div class="list__body">
-      <div>
+      <div class="list__cards">
         <Card v-for="card in cards" />
       </div>
     </div>
     <div class="list__footer">
-      <span>Actions</span>
-      <span>Actions</span>
+      <span>
+        <button>+ Add another card</button>
+      </span>
+      <span>
+        <button>Actions</button>
+      </span>
     </div>
   </section>
 </template>
@@ -25,9 +33,9 @@ const cards = ref([{}, {}, {}]);
 <style scoped>
 section.list {
   min-width: 300px;
-  background-color: whitesmoke;
+  background-color: lightgray;
   padding: 1rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
 }
 
 .list__header {
@@ -37,6 +45,12 @@ section.list {
 
 .list__body {
   background-color: lightgray;
+}
+
+.list__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .list__footer {
