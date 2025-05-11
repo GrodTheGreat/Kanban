@@ -16,7 +16,7 @@
   background-color: whitesmoke;
   padding: 0.5rem;
   min-height: 2rem;
-  box-shadow: 0 2px 4px black;
+  box-shadow: 0 2px 4px darkgray;
 }
 .card__actions {
   display: flex;
