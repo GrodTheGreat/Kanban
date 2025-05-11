@@ -23,17 +23,23 @@
 
 .bar {
   grid-area: appbar;
+  z-index: 3;
+  box-shadow: 0 1px 4px black;
 }
 
 .side {
   grid-area: sidebar;
+  z-index: 2;
+  box-shadow: 1px 0 4px black;
 }
 
 .main {
   grid-area: main;
+  z-index: 1;
 }
 
 .foot {
   grid-area: footer;
+  z-index: 1;
 }
 </style>
